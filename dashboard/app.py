@@ -389,7 +389,7 @@ def main():
         A decision-focused retail intelligence dashboard designed to uncover revenue drivers, customer behavior patterns, and growth opportunities from real transaction data.
         The app combines data auditing, KPI monitoring, customer intelligence, category strategy, seasonality, and decision-focused interpretation.
         </p>
-        <h4 style="margin:0;">Created by Powell A. Ndlovu</h4>
+        <h5 style="margin:0;">Created by Powell A. Ndlovu GIS and Data Analyst</h5>
     </div>
     """, unsafe_allow_html=True)
 
