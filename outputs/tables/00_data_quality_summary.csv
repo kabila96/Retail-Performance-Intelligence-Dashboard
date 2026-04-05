@@ -1,0 +1,13 @@
+check,value
+rows,5053
+columns,12
+invalid_dates,0
+total_missing_cells,0
+duplicate_rows,0
+nonpositive_unit_price,0
+nonpositive_quantity,0
+ratings_outside_0_10,0
+sales_iqr_outliers,281
+date_min,2024-01-01
+date_max,2024-12-31
+coverage_days,365

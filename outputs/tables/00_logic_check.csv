@@ -1,0 +1,11 @@
+Metric,Computation,Threshold_or_Rule,Handling
+Sales,Unit price * Quantity,Unit price > 0 and Quantity >= 1,Use all rows for totals; use medians/non-parametric tests for skewed comparisons
+Monthly sales,Sum(Sales) by month,Valid parsed Date required,Month-over-month growth = (current-prior)/prior
+Revenue share,Group sales / total sales,No missing grouping labels,Used for branch/product/payment contribution
+Member vs Normal,Compare transaction-level Sales distributions,Groups must be non-empty,Mann-Whitney used because Sales is right-skewed
+Payment comparison,Compare transaction-level Sales across payment methods,Groups must be non-empty,Kruskal-Wallis used because Sales is right-skewed
+Rating-spend relationship,Pearson and Spearman correlation of Rating vs Sales,Rating in valid range,Pearson tests linear signal; Spearman tests monotonic signal
+Product rating comparison,Mean/median Rating by product line,Minimum sample size >= 50 per product line,Kruskal-Wallis used to test group differences
+Gender behavior,Compare Sales and product mix by Gender,Groups must be non-empty,Sales by product line normalized to shares as robustness check
+Transaction-size distribution,Describe Sales percentiles and shape,Sales > 0,Use percentiles due to skew
+Seasonality by product line,Sum(Sales) by Month x Product line,Full month coverage required,Use raw sales and within-month shares as robustness check
